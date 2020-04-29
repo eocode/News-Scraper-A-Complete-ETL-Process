@@ -7,15 +7,18 @@
 * Page Object Pattern for build this solution
 * Scraping News Data from universal.com.mx
 
+> This project has build with PyCharm / Anaconda and Python 3.7.7
+
 # Preview
 
 # How to run
 
-You can use conda or python to execute this proyect
+You can use conda or python to execute this project
 
 ```shell
-python venv env
-activate
+conda create --name data
+conda activate data
+pip install requirements.txt
 python main.py
 ```
 
