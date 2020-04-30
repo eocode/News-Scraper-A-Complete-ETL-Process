@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cabda20a-9765-42bb-9f03-0c63c11fe065" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/datawrangling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/news_page_object.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eluniversal_2020_04_29_articles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/getdata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +104,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588181029951</updated>
-      <workItem from="1588181037299" duration="3665000" />
+      <workItem from="1588181037299" duration="12109000" />
+      <workItem from="1588193598105" duration="6888000" />
     </task>
     <task id="LOCAL-00001" summary=":rocket: Base structure for data Project">
       <created>1588182318008</created>
@@ -124,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588184620075</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":rocket: Update README.md">
+      <created>1588184882899</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588184882899</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,9 +158,17 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588184619416">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588203142056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588184619416" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588203142056" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588184882273">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588184882273" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588193623219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588193623219" />
   </component>
 </project>

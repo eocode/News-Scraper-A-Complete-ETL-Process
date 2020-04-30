@@ -5,6 +5,8 @@
 
 # Features
 * Page Object Pattern for build this solution
+* Prepared for read every newsfeed
+* Configurable scrapper
 * Scraping News Data from universal.com.mx
 
 > This project has build with PyCharm / Anaconda and Python 3.7.7
