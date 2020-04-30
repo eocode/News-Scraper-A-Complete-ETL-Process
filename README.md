@@ -21,6 +21,23 @@
 
 # Preview
 
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+<div align="center">
+  <img src="img/3.png">
+</div>
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+
 # How to run
 
 You can use conda or python to execute this project

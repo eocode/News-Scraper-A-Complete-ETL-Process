@@ -125,4 +125,3 @@ class DataWrangling(Source):
         df = remove_duplicate_entries(df, 'title')
         df = drop_rows_with_missing_values(df)
         save_data(df, self.dataset)
-        print(df)
