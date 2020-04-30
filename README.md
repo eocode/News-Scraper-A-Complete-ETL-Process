@@ -5,11 +5,19 @@
 
 # Features
 * Page Object Pattern for build this solution
-* Prepared for read every newsfeed
-* Configurable scrapper
-* Scraping News Data from universal.com.mx
+* Configurable for read every newsfeed
+* Find by topic
+* Select newspapper
 
 > This project has build with PyCharm / Anaconda and Python 3.7.7
+
+# Project Structure
+* data
+    * RawDataset and Clean Dataset
+* models
+    * Dataflow for procesing data
+* notebooks
+    * Explore and test problem
 
 # Preview
 
