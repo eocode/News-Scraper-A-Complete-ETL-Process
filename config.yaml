@@ -9,5 +9,5 @@ news_sites:
     url: https://elpais.com
     queries:
       homepage_article_links: '.headline a'
-      article_body: '.field-name_body'
-      article_title: '.pane-content h1'
+      article_body: '.article_body'
+      article_title: '.a_hg h1'

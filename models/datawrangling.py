@@ -2,7 +2,9 @@ import hashlib
 import logging
 from urllib.parse import urlparse
 
+import nltk
 import pandas as pd
+from nltk.corpus import stopwords
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -69,6 +71,42 @@ def remove_new_lines_from_body(df):
     return df
 
 
+def tokenize_column(df, column_name):
+    logger.info('Calculating the number of unique tokens in {}'.format(column_name))
+    stop_words = set(stopwords.words('spanish'))
+
+    n_tokens = (df
+                .dropna()
+                .apply(lambda row: nltk.word_tokenize(row[column_name]), axis=1)
+                .apply(lambda tokens: list(filter(lambda token: token.isalpha(), tokens)))
+                .apply(lambda tokens: list(map(lambda token: token.lower(), tokens)))
+                .apply(lambda word_list: list(filter(lambda word: word not in stop_words, word_list)))
+                .apply(lambda valid_word_list: len(valid_word_list))
+                )
+
+    df['n_tokens_' + column_name] = n_tokens
+
+    return df
+
+
+def remove_duplicate_entries(df, column_name):
+    logger.info('Removing duplicate entries')
+    df.drop_duplicates(subset=[column_name], keep='first', inplace=True)
+    return df
+
+
+def drop_rows_with_missing_values(df):
+    logger.info('Dropping rows with missing values')
+    return df.dropna()
+
+
+def save_data(df, filename):
+    file = filename.replace('.csv', '')
+    clean_filename = f'{file}_clean.csv'
+    logger.info(f'Saving data at location {filename}')
+    df.to_csv(clean_filename)
+
+
 class DataWrangling(Source):
     def __init__(self, dataset, newspaper_uid):
         super().__init__(dataset, newspaper_uid)
@@ -82,4 +120,9 @@ class DataWrangling(Source):
         df = fill_missing_titles(df)
         df = generate_ids_for_rows(df)
         df = remove_new_lines_from_body(df)
+        df = tokenize_column(df, 'title')
+        df = tokenize_column(df, 'content')
+        df = remove_duplicate_entries(df, 'title')
+        df = drop_rows_with_missing_values(df)
+        save_data(df, self.dataset)
         print(df)

@@ -17,6 +17,8 @@ def _news_scraper(news_site_uid, mode):
         Pipeline.extract_data(news_site_uid, host)
     elif mode == 't':
         Pipeline.transform_data(news_site_uid)
+    elif mode == 'l':
+        Pipeline.load_data(news_site_uid)
 
 
 if __name__ == '__main__':

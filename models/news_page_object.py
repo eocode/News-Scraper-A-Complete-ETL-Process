@@ -1,5 +1,6 @@
-import requests
 import bs4
+import requests
+
 from common import config
 
 

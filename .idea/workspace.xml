@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cabda20a-9765-42bb-9f03-0c63c11fe065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/datawrangling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Exploring-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/Exploring.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/elpais_2020_04_30_articles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/elpais_2020_04_30_articles_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/eluniversal_2020_04_30_articles_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/newspapers.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/load_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/sqlite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/datawrangling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/news_page_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/news_page_object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eluniversal_2020_04_29_articles.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eluniversal_2020_04_29_articles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/eluniversal_2020_04_30_articles.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/datawrangling.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/datawrangling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/news_page_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/news_page_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Exploring.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Exploring.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588181029951</updated>
       <workItem from="1588181037299" duration="12109000" />
-      <workItem from="1588193598105" duration="16162000" />
+      <workItem from="1588193598105" duration="22468000" />
     </task>
     <task id="LOCAL-00001" summary=":rocket: Base structure for data Project">
       <created>1588182318008</created>
@@ -152,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588206763179</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=":rocket: Update README.md and integrate pipeline to process etl by command line interface">
+      <created>1588219122569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588219122569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +176,8 @@
     <MESSAGE value=":rocket: Basic structure for scrapper" />
     <MESSAGE value=":rocket: Update README.md" />
     <MESSAGE value=":rocket: Add datawrangling.py and save scrapping on a csv file" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Add datawrangling.py and save scrapping on a csv file" />
+    <MESSAGE value=":rocket: Update README.md and integrate pipeline to process etl by command line interface" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Update README.md and integrate pipeline to process etl by command line interface" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -174,10 +187,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588203142056" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588206762094">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1588219121230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588206762094" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588219121230" />
     <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588193623219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
