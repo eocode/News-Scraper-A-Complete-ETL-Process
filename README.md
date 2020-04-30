@@ -8,6 +8,7 @@
 * Configurable for read every newsfeed
 * Find by topic
 * Select newspapper
+* Search by topic (Experimental)
 
 > This project has build with PyCharm / Anaconda and Python 3.7.7
 
