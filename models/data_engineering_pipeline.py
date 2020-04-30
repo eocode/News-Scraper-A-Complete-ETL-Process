@@ -7,11 +7,12 @@ import pandas as pd
 from requests.exceptions import HTTPError
 from urllib3.exceptions import MaxRetryError
 
-from models.datawrangling import DataWrangling
-from models.load_data import Article
-from models.news_page_object import HomePage, ArticlePage
-from models.post import Post
-from models.sqlite import Base, Engine, Session
+from common import config
+from models.etl.extract.news_page_object import HomePage, ArticlePage
+from models.etl.extract.post import Post
+from models.etl.load.data_model import Article
+from models.etl.load.sqlite import Base, Engine, Session
+from models.etl.transform.datawrangling import DataWrangling
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,12 +22,18 @@ is_root_path = re.compile(r'^/.+$')
 
 
 class Pipeline:
-
     @staticmethod
     def extract_data(news_site_uid, host):
         logger.info('Start extracting!!')
         canting = int(input('How much news do you need? '))
-        homepage = HomePage(news_site_uid, host)
+        option = input('Do you want search news by specific words? (y/n) ')
+        with_search = False
+        if option.lower() == 'y':
+            with_search = True
+            searching = input('what do you want to search? (Enter to search all) ')
+            host = host + config()['news_sites'][news_site_uid]['search'] + searching
+
+        homepage = HomePage(news_site_uid, host, with_search)
         articles = []
         for link in homepage.article_links:
             article = Pipeline.fetch_article(news_site_uid, host, link)

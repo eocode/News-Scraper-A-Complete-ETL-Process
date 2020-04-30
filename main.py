@@ -2,7 +2,7 @@ import argparse
 import logging
 
 from common import config
-from models.pipeline import Pipeline
+from models.data_engineering_pipeline import Pipeline
 
 logging.basicConfig(level=logging.INFO)
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     news_site_choices = list(config()['news_sites'].keys())
     parser.add_argument('mode',
-                        help='Indicate ETL Process (e), (t), (l)',
+                        help='Indicate etl Process (e), (t), (l)',
                         type=str,
                         choices=['e', 't', 'l'])
     parser.add_argument('news_site',

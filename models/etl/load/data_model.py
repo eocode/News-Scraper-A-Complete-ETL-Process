@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from models.sqlite import Base
+from models.etl.load.sqlite import Base
 
 
 class Article(Base):

@@ -13,22 +13,27 @@ class NewsPage:
         self._visit(url)
 
     def _select(self, query_string):
+        print(query_string)
         return self._html.select(query_string)
 
     def _visit(self, url):
         response = requests.get(url)
         response.raise_for_status()
+        print(url)
         self._html = bs4.BeautifulSoup(response.text, 'html.parser')
 
 
 class HomePage(NewsPage):
-    def __init__(self, news_site_uid, url):
+    def __init__(self, news_site_uid, url, with_search):
         super().__init__(news_site_uid, url)
+        self._with_search = with_search
 
     @property
     def article_links(self):
         link_list = []
-        for link in self._select(self._queries['homepage_article_links']):
+        for link in self._select(self._queries['search_article_links'] if self._with_search else self._queries[
+            'homepage_article_links']):
+            print(link)
             if link and link.has_attr('href'):
                 link_list.append(link)
 
